@@ -32,7 +32,16 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('EstelTalk 🌷')),
+      appBar: AppBar(
+        title: const Text(
+          'EstelTalk 🌷',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontFamily: 'estelfont',
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           Expanded(
@@ -54,28 +63,39 @@ class _ChatScreenState extends State<ChatScreen> {
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color:
+                          //warna balok chat
                           message['isUser']
                               ? Colors.pink[100]
                               : Colors.grey[300],
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Text(message['text']),
+                    child: Text(
+                      message['text'],
+                      style: const TextStyle(fontFamily: 'estelfont'),
+                    ),
                   ),
                 );
               },
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            color: Colors.grey[200],
+            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(30),
+            ),
+            margin: const EdgeInsets.all(8), //biar ga nempel ke tepi
             child: Row(
               children: [
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       hintText: 'Type your message...',
+                      border: InputBorder.none, //underline ilang
                     ),
+                    textInputAction: TextInputAction.send,
+                    keyboardType: TextInputType.text,
                     onSubmitted: (_) => _sendMessage(),
                   ),
                 ),

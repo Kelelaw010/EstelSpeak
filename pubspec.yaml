@@ -20,3 +20,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: estelfont
+      fonts:
+        - asset: assets/font/CascadiaMono-Regular.ttf

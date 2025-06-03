@@ -8,7 +8,8 @@ class ChatApi {
       'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_apiKey';
 
   static Future<String> sendMessage(String prompt) async {
-    final fullPrompt = " Jawab dengan gaya santai ya:  $prompt";
+    final fullPrompt =
+        "Hi Estel, aku Tara. Tolong jawab dengan sopan dan santai dalam Bahasa Inggris dan Indonesia ya:  $prompt";
     try {
       final response = await http.post(
         Uri.parse(_endpoint),
@@ -36,7 +37,9 @@ class ChatApi {
           //teks balasan
           final text =
               data['candidates']?[0]?['content']?['parts']?[0]?['text'];
-          return text ?? '[Empty response]';
+          if (text != null) {
+            return text ?? '[Empty response]';
+          }
         }
       } //kalo error, nanti muncul pesan failed response
       else {
