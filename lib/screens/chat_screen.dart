@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../sevices/gemini_api_service.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -11,7 +12,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _controller = TextEditingController();
   final List<Map<String, dynamic>> _messages = [];
 
-  void _sendMessage() {
+  void _sendMessage() async {
     final text = _controller.text.trim();
     if (text.isNotEmpty) {
       setState(() {
@@ -19,11 +20,11 @@ class _ChatScreenState extends State<ChatScreen> {
       });
       _controller.clear();
 
-      //simulasi balasan (nanti ganti ke API)
-      Future.delayed(const Duration(milliseconds: 500), () {
-        setState(() {
-          _messages.add({'text': "this is a dummy reply.", 'isUser': false});
-        });
+      //kirim ke gemini API tunggu di balas
+      final response = await ChatApi.sendMessage(text);
+
+      setState(() {
+        _messages.add({'text': response, 'isUser': false});
       });
     }
   }
