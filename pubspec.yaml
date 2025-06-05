@@ -24,3 +24,6 @@ flutter:
     - family: estelfont
       fonts:
         - asset: assets/font/CascadiaMono-Regular.ttf
+
+  assets:
+    - assets/img/ #tinggal tambahin file gambar

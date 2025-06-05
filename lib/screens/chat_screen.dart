@@ -91,12 +91,16 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: TextField(
                     controller: _controller,
                     decoration: InputDecoration(
-                      hintText: 'Type your message...',
+                      hintText:
+                          'Type your message...', // teks placeholder di input
                       border: InputBorder.none, //underline ilang
                     ),
-                    textInputAction: TextInputAction.send,
-                    keyboardType: TextInputType.text,
-                    onSubmitted: (_) => _sendMessage(),
+                    textInputAction:
+                        TextInputAction.send, // tombol keyboard jadi "send"
+                    keyboardType: TextInputType.text, // tipe input teks biasa
+                    onSubmitted:
+                        (_) =>
+                            _sendMessage(), // saat tekan enter/submit, kirim pesan
                   ),
                 ),
                 IconButton(

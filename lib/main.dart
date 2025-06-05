@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/chat_screen.dart';
+import 'screens/welcome_screen.dart';
 
 void main() {
   runApp(const Main());
@@ -13,8 +13,12 @@ class Main extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EstelTalk 🌷',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.pink),
-      home: const ChatScreen(), //jangan lupa
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.pink,
+        fontFamily: 'estelfont',
+      ),
+      home: const WelcomeScreen(), //welcome dulu yang ditampilin
     );
   }
 }
