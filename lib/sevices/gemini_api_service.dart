@@ -1,13 +1,18 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'logger_service.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ChatApi {
-  static const String _apiKey = 'AIzaSyBiwxbwlHNGabkOGI4nmhCkNRp34T6OX3k';
+  static final String _apiKey = dotenv.env['GOOGLE_API_KEY'] ?? '';
   static String get _endpoint =>
       'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_apiKey';
 
+  // fungsi untuk kirim prompt ke gemini
   static Future<String> sendMessage(String prompt) async {
+    if (_apiKey.isEmpty) {
+      return '[Error] API key is not set in .env file';
+    }
     final fullPrompt =
         "Hi Estel, aku Tara. Tolong jawab dengan sopan dan santai dalam Bahasa Inggris dan Indonesia ya:  $prompt";
     try {

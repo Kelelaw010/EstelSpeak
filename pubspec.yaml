@@ -12,6 +12,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: ^1.4.0
   logger: ^1.1.0
+  flutter_dotenv: ^5.0.2
+  js: ^0.6.7
+  web: ^0.5.0
 
 dev_dependencies:
   flutter_test:
@@ -26,4 +29,6 @@ flutter:
         - asset: assets/font/CascadiaMono-Regular.ttf
 
   assets:
-    - assets/img/ #tinggal tambahin file gambar
+    - .env
+  # assets:
+  #   - assets/img/ #tinggal tambahin file gambar
