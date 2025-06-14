@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../sevices/gemini_api_service.dart';
+import '../sliding/drawer_widget.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -42,6 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         centerTitle: true,
       ),
+      drawer: const DrawerWidget(), //drawer di siniii
       body: Column(
         children: [
           Expanded(
