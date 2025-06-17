@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../sevices/gemini_api_service.dart';
 import '../sliding/drawer_widget.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -21,12 +22,16 @@ class _ChatScreenState extends State<ChatScreen> {
       });
       _controller.clear();
 
+      final box = Hive.box('chat history');
+      box.add({'text': text, 'isUser': false}); //menyimpan pesan dari tara
+
       //kirim ke gemini API tunggu di balas
       final response = await ChatApi.sendMessage(text);
 
       setState(() {
         _messages.add({'text': response, 'isUser': false});
       });
+      box.add({'text': response, 'isUser': false});
     }
   }
 

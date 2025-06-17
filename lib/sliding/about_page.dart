@@ -14,11 +14,6 @@ class AboutPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              ' Tentang Estel 🌸',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 12),
-            Text(
               'EstelTalk adalah chatbot yang dikembangkan untuk membantu melatih skill bahasa inggris',
               style: TextStyle(fontSize: 16),
             ),
