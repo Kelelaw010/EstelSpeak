@@ -1,16 +1,24 @@
-# estelspeak
+# 🌷 EstelTalk — Bilingual AI Chatbot with Gemini API
 
-A new Flutter project.
+EstelTalk is a mobile chatbot application built with Flutter. It supports both Indonesian and English languages, powered by Google's Gemini AI. The app offers real-time conversations, custom themes, and chat history management for an elegant and intuitive chatting experience.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 💬 **AI Chat** using Gemini API (text-based)
+- 🇮🇩🇬🇧 **Bilingual Support**: Indonesian & English
+- 📂 **Sliding Drawer Menu**:
+  - 📜 **Chat History**: Stored locally using Hive
+    - 🗑️ **Delete** individual or all chat history
+- 📅 **Simple Calendar Page** (for future scheduling)
+- **About Estel**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Tech Stack
+- **Flutter** & Dart
+- **Gemini API** for AI responses
+- **Hive** for local storage
+- **TableCalendar** for calendar view
+- **flutter_dotenv** for API key management
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
