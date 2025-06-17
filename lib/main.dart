@@ -10,6 +10,7 @@ Future<void> main() async {
 
   await Hive.initFlutter(); //inisialisasi si Hive
   await Hive.openBox('chat history'); //untuk buka box yang mau di gunain
+  runApp(const Main());
 }
 
 class Main extends StatelessWidget {
