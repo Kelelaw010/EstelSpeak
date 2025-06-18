@@ -21,4 +21,7 @@ EstelTalk is a mobile chatbot application built with Flutter. It supports both I
 - **TableCalendar** for calendar view
 - **flutter_dotenv** for API key management
 
+## 🖼️ Poster EstelTalk
+
+![Poster EstelTalk](https://github.com/Kelelaw010/EstelSpeak/blob/master/EstelTalk.png)
 
