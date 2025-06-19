@@ -11,8 +11,8 @@ EstelTalk is a mobile chatbot application built with Flutter. It supports both I
 - 📂 **Sliding Drawer Menu**:
   - 📜 **Chat History**: Stored locally using Hive
     - 🗑️ **Delete** individual or all chat history
-- 📅 **Simple Calendar Page** (for future scheduling)
-- **About Estel**
+  - 📅 **Simple Calendar Page** (for future scheduling)
+  - **About Estel**
 
 ## 🛠️ Tech Stack
 - **Flutter** & Dart
